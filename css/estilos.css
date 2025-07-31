@@ -1,0 +1,146 @@
+/* estilos.css */
+
+/* VARIÁVEIS DE CORES */
+:root {
+    --cor-tijolo-escuro: #8B4513;
+    /* SaddleBrown */
+    --cor-tijolo-medio: #A0522D;
+    /* Sienna */
+    --cor-tijolo-claro: #CD853F;
+    /* Peru */
+    --cor-vermelho-barber: #DC3545;
+    /* Vermelho Bootstrap para acento */
+    --cor-azul-barber: #007BFF;
+    /* Azul Bootstrap para acento */
+    --cor-branco: #FFFFFF;
+    --cor-preto: #212529;
+    /* Cor padrão do texto escuro do Bootstrap */
+}
+
+/* CORES DE FUNDO */
+.bg-brown {
+    background-color: var(--cor-tijolo-medio) !important;
+}
+
+.bg-dark-brown {
+    background-color: var(--cor-tijolo-escuro) !important;
+}
+
+/* CORES DE TEXTO */
+.text-primary-custom {
+    color: var(--cor-azul-barber) !important;
+    /* Azul do barber pole para ícones e destaque */
+}
+
+.text-dark-brown {
+    color: var(--cor-tijolo-escuro) !important;
+}
+
+/* BOTÕES CUSTOMIZADOS */
+.custom-btn {
+    background-color: var(--cor-vermelho-barber);
+    /* Vermelho do barber pole */
+    border-color: var(--cor-vermelho-barber);
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #BD2D3A;
+    /* Um tom mais escuro de vermelho no hover */
+    border-color: #BD2D3A;
+    transform: translateY(-2px);
+    /* Efeito de elevação leve */
+}
+
+/* Banner SEÇÃO HOME - BANNER */
+.home-banner {
+    position: relative;
+    overflow: hidden;
+    /* Garante que a imagem de fundo não vaze */
+}
+
+.home-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay escuro para melhorar a legibilidade do texto */
+    z-index: 1;
+}
+
+.home-banner>.container {
+    position: relative;
+    z-index: 2;
+}
+
+/* NAVBAR LINKS ATIVOS */
+.navbar-nav .nav-link.active {
+    color: var(--cor-vermelho-barber) !important;
+    /* Vermelho no link ativo */
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--cor-vermelho-barber) !important;
+    /* Vermelho no hover */
+}
+
+/* CARTÕES DE SERVIÇO */
+.custom-card-service {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card-service .card-body {
+    padding: 2.5rem 1.5rem;
+    /* Mais espaçamento interno */
+}
+
+/* FORMULÁRIO DE CONTATO */
+#contato .form-control {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+}
+
+#contato .form-label {
+    font-weight: bold;
+    color: var(--cor-branco);
+}
+
+/* AJUSTES DE RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .home-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-banner p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-banner {
+        min-height: 40vh;
+    }
+
+    .home-banner h1 {
+        font-size: 2rem;
+    }
+
+    .home-banner p {
+        font-size: 0.9rem;
+    }
+
+    .custom-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
